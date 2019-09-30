@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html>
+<head>  
+<script>
+window.onload = function () {
+
+var chart = new CanvasJS.Chart("chartContainer", {
+	animationEnabled: true,
+	theme: "light2", // "light1", "light2", "dark1", "dark2"
+	title:{
+		text: "Vulnerabilities"
+	},
+	axisY: {
+		title: "Total Instances Found"
+	},
+	data: [{        
+		type: "column",  
+		showInLegend: true, 
+		legendMarkerColor: "grey",
+		legendText: "count",
+		dataPoints: [      
+			{ y: 30078, label: "vul1" },
+			{ y: 26455,  label: "vul2" },
+			{ y: 19709,  label: "vul3" },
+			{ y: 58400,  label: "vul4" }
+		]
+	}]
+});
+chart.render();
+
+
+var chart = new CanvasJS.Chart("chartContainers", {
+	animationEnabled: true,
+	title: {
+		text: "Vulnerabilities by Severity"
+	},
+	data: [{
+		type: "pie",
+		startAngle: 240,
+		yValueFormatString: "##0.00\"%\"",
+		indexLabel: "{label} {y}",
+		dataPoints: [
+			{ y: 300878, label: "High" },
+			{ y: 266455,  label: "Medium" },
+			{ y: 169709,  label: "Low" },
+			{ y: 158400,  label: "Informational" }
+		]
+	}]
+});
+chart.render();
+
+
+
+}
+</script>
+</head>
+<body>
+<div id="chartContainer" style="height: 370px; max-width: 920px; margin: 0px auto;"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+<div id="chartContainers" style="height: 300px; width: 100%;"></div>
+
+
+
+
+</body>
+</html>
