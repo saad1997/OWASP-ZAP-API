@@ -2,7 +2,7 @@ import time
 from pprint import pprint
 from zapv2 import ZAPv2
 
-target = 'https://cms.nust.edu.pk'
+target = 'https://test.com'
 apikey = 'pbjh2cv3qv6u03ib3llfnpcq5c' # Change to match the API key set in ZAP, or use None if the API key is disabled
 
 # By default ZAP API client will connect to port 8080
@@ -11,7 +11,7 @@ zap = ZAPv2(apikey=apikey)
 zap = ZAPv2(apikey=apikey, proxies={'http': 'http://192.168.0.27:8095', 'https': 'http://192.168.0.27:8095'})
 
 # do stuff
-print ('Welcome to Web Security Assessment Tool\n\n\n\n!!!WEBSAT!!!')
+print ('Welcome to ------ Tool\n\n\n\n!!!NAME!!!')
 print ('Accessing target %s' % target)
 # try have a unique enough session...
 zap.urlopen(target)
